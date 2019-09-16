@@ -53,8 +53,6 @@ public class ProblemSet1 {
          * by-11-inch sheet of paper?
          */
         
-        double length = 11;
-        double width = 8.5;
         double lengthSquared = length * length;
         double widthSquared = width * width;
         double hypotSquared = lengthSquared + widthSquared;
@@ -68,16 +66,6 @@ public class ProblemSet1 {
          * Given the grading policy and the homework, quiz, and test grades I received,
          * what marking period grade will I get?
          */
-        
-        int homework1 = 88;
-        int homework2 = 91;
-        int homework3 = 0;
-        int quiz1 = 84;
-        int quiz2 = 89;
-        int quiz3 = 93;
-        int test1 = 74;
-        int test2 = 87;
-        int test3 = 82;
         int homework1 = 88;
         int homework2 = 91;
         int homework3 = 0;
@@ -114,7 +102,18 @@ public class ProblemSet1 {
          * will I make this week?
          */
 
-        
+        double mondayHours = 7.5;
+        double tuesdayHours = 8;
+        double wednesdayHours = 10.5;
+        double thursdayHours = 9.5;
+        double fridayHours = 6;
+        double saturdayHours = 11.5;
+        double sundayHours = 0;
+        double hourlyWage = 12.50;
+        double totalHours = mondayHours + tuesdayHours + wednesdayHours + thursdayHours + fridayHours + saturdayHours + sundayHours;
+        double totalEarned = totalHours * hourlyWage;
+        System.out.printf("$%.2f", totalEarned);
+        System.out.println("\n");
         
         /*
          * Exercise 6.
@@ -122,7 +121,18 @@ public class ProblemSet1 {
          * What is my take-home pay each check?
          */
         
-        
+        double yearlySalary = 117000; 
+        double amountPerCheck = 117000 / 24; 
+        double federalTaxRate = .24; 
+        double stateTaxRate = .0637; 
+        double contributionRate = .07; 
+        double takehome = amountPerCheck - (amountPerCheck * contributionRate); 
+        double federalTax = takehome * federalTaxRate;
+        double newtakehome = takehome - federalTax;
+        double stateTax = newtakehome * stateTaxRate;
+        double finalTakehome = newtakehome - stateTax;
+        System.out.printf("$%,.2f", finalTakehome); 
+        System.out.println("\n");
         
         /*
          * Exercise 7.
