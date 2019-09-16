@@ -22,11 +22,15 @@ public class ProblemSet1 {
          * What is the area (in square millimeters) of an 8.5-by-11-inch sheet of paper?
          */
         
-        double inchesToCentimeters = inchesToMillimeters / 10;
-        double lengthInCentimeters = (length * inchesToCentimeters);
-        double widthInCentimeters = (width * inchesToCentimeters);
-        double perimeterInCentimeters = (lengthInCentimeters * 2) + (widthInCentimeters * 2);
-        System.out.printf("%.2f",perimeterInCentimeters);
+
+	double length = 11;
+        double width = 8.5;
+        double inchesToMillimeters = 25.4;
+        double lengthInMillimeters = (length * inchesToMillimeters);
+        double widthInMillimeters = (width * inchesToMillimeters);
+        double areaInSquareMillimeters = (lengthInMillimeters * widthInMillimeters);
+        System.out.println();
+        System.out.printf("%,.2f square millimeters.",areaInSquareMillimeters);
         System.out.println("\n");
         
         /*
@@ -35,8 +39,6 @@ public class ProblemSet1 {
          * What is the perimeter (in centimeters) of an 8.5-by-11-inch sheet of paper?
          */
         
-        double length = 11;
-        double width = 8.5;
         double inchesToCentimeters = 2.54;
         double lengthInCentimeters = (length * inchesToCentimeters);
         double widthInCentimeters = (width * inchesToCentimeters);
