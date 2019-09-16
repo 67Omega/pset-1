@@ -43,7 +43,7 @@ public class ProblemSet1 {
         double lengthInCentimeters = (length * inchesToCentimeters);
         double widthInCentimeters = (width * inchesToCentimeters);
         double perimeterInCentimeters = (lengthInCentimeters * 2) + (widthInCentimeters * 2);
-        System.out.printf("%.2f",perimeterInCentimeters);
+        System.out.printf("%.2f centimeters.",perimeterInCentimeters);
         System.out.println("\n");
         
         /*
@@ -53,7 +53,14 @@ public class ProblemSet1 {
          * by-11-inch sheet of paper?
          */
         
-        
+        double length = 11;
+        double width = 8.5;
+        double lengthSquared = length * length;
+        double widthSquared = width * width;
+        double hypotSquared = lengthSquared + widthSquared;
+        double diagonal = Math.sqrt(hypotSquared);
+        System.out.printf("%.2f inches.",diagonal);
+        System.out.println("\n");
 
         /*
          * Exercise 4.
@@ -71,7 +78,33 @@ public class ProblemSet1 {
         int test1 = 74;
         int test2 = 87;
         int test3 = 82;
-        
+        int homework1 = 88;
+        int homework2 = 91;
+        int homework3 = 0;
+        int quiz1 = 84;
+        int quiz2 = 89;
+        int quiz3 = 93;
+        int test1 = 74;
+        int test2 = 87;
+        int test3 = 82;
+        double homeworkWeight = 0.15;
+        double quizWeight = 0.35;
+        double testWeight = 0.50;
+        double homework1Grade = homework1 * homeworkWeight;
+        double homework2Grade = homework2 * homeworkWeight;
+        double homework3Grade = homework3 * homeworkWeight;
+        double quiz1Grade = quiz1 * quizWeight;
+        double quiz2Grade = quiz2 * quizWeight;
+        double quiz3Grade = quiz3 * quizWeight;
+        double test1Grade = test1 * testWeight;
+        double test2Grade = test2 * testWeight;
+        double test3Grade = test3 * testWeight;
+        double homeworkGrade = (homework1Grade + homework2Grade + homework3Grade) / 3;
+        double quizGrade = (quiz1Grade + quiz2Grade + quiz3Grade) / 3;
+        double testGrade = (test1Grade + test2Grade + test3Grade) / 3;
+        double finalGrade = homeworkGrade + quizGrade + testGrade;
+        System.out.printf("%.2f%%.",finalGrade);
+        System.out.println("\n");
         
         
         /*
