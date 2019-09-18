@@ -147,7 +147,7 @@ public class ProblemSet1 {
     	double totalAttending = students + teachers;
     	double numberOfBuses = Math.ceil(totalAttending/busCapacity);
     	double lastBus = totalAttending % busCapacity;
-    	System.out.printf("%.0f buses are needed, with %.0f passengers on the last bus.\n", numberOfBuses, lastBus);
+    	System.out.printf("%.0f buses are needed, with %.0f passengers on the last bus.\n \n", numberOfBuses, lastBus);
         
         /*
          * Exercise 8.
@@ -155,14 +155,14 @@ public class ProblemSet1 {
          * What is the surface area of a standard Cornhole board?
          */
         
-    double length = 48;
-    double width = 24;
+    double newLength = 48;
+    double newWidth = 24;
     double holeDiameter = 6;
     double holeRadius = holeDiameter / 2;
-    double basicDimensions = length * width;
+    double basicDimensions = newLength * newWidth;
     double holeArea = Math.PI * (holeRadius * holeRadius);
     double totalArea = basicDimensions - holeArea;
-    System.out.printf("%.2f square inches.\n", totalArea);
+    System.out.printf("%.2f square inches.\n \n", totalArea);
         
         /*
          * Exercise 9.
@@ -182,12 +182,12 @@ public class ProblemSet1 {
     boolean leapTestOneYearThree = ((yearThree % 20) == 0);
     boolean leapTestTwoYearThree = ((yearThree % 100) != 0);
     boolean leapTestThreeYearThree = ((yearThree % 400) == 0);
-    boolean isOneLeapYear = (leapTestOneYearOne == true || ((leapTestTwoYearOne == false) & (leapTestThreeYearOne == true)));
-    boolean isTwoLeapYear = (leapTestOneYearTwo == true || ((leapTestTwoYearTwo == false) & (leapTestThreeYearTwo == true)));
-    boolean isThreeLeapYear = (leapTestOneYearThree == true || ((leapTestTwoYearThree == false) & (leapTestThreeYearThree == true)));
+    boolean isOneLeapYear = (leapTestOneYearOne == true & ((leapTestTwoYearOne == true) || (leapTestThreeYearOne == true)));
+    boolean isTwoLeapYear = (leapTestOneYearTwo == true & ((leapTestTwoYearTwo == true) || (leapTestThreeYearTwo == true)));
+    boolean isThreeLeapYear = (leapTestOneYearThree == true & ((leapTestTwoYearThree == true) || (leapTestThreeYearThree == true)));
     System.out.printf("%.0f is a leap year...%b.\n", yearOne, isOneLeapYear);
     System.out.printf("%.0f is a leap year...%b.\n", yearTwo, isTwoLeapYear);
-    System.out.printf("%.0f is a leap year...%b.\n", yearThree, isThreeLeapYear);
+    System.out.printf("%.0f is a leap year...%b.\n \n", yearThree, isThreeLeapYear);
         
         /*
          * Exercise 10.
@@ -202,7 +202,7 @@ public class ProblemSet1 {
     double windchillThirdCalc = Math.pow(windSpeed, 0.16);
     double windchillFourthCalc = windchillSecondCalc * windchillThirdCalc;
     double windchill = windchillFirstCalc + windchillFourthCalc;
-    System.out.printf("%.1f degrees.\n", windchill);
+    System.out.printf("%.1f degrees.\n \n", windchill);
         
     }
 }
