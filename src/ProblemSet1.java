@@ -170,7 +170,24 @@ public class ProblemSet1 {
          * Are the years 2020, 2100, and 2400 leap years?
          */
         
-        
+        double yearOne = 2020;
+    double yearTwo = 2100;
+    double yearThree = 2400;
+    boolean leapTestOneYearOne = ((yearOne % 20) == 0);
+    boolean leapTestTwoYearOne = ((yearOne % 100) != 0);
+    boolean leapTestThreeYearOne = ((yearOne % 400) == 0);
+    boolean leapTestOneYearTwo = ((yearTwo % 20) == 0);
+    boolean leapTestTwoYearTwo = ((yearTwo % 100) != 0);
+    boolean leapTestThreeYearTwo = ((yearTwo % 400) == 0);
+    boolean leapTestOneYearThree = ((yearThree % 20) == 0);
+    boolean leapTestTwoYearThree = ((yearThree % 100) != 0);
+    boolean leapTestThreeYearThree = ((yearThree % 400) == 0);
+    boolean isOneLeapYear = (leapTestOneYearOne == true || ((leapTestTwoYearOne == false) & (leapTestThreeYearOne == true)));
+    boolean isTwoLeapYear = (leapTestOneYearTwo == true || ((leapTestTwoYearTwo == false) & (leapTestThreeYearTwo == true)));
+    boolean isThreeLeapYear = (leapTestOneYearThree == true || ((leapTestTwoYearThree == false) & (leapTestThreeYearThree == true)));
+    System.out.printf("%.0f is a leap year...%b.\n", yearOne, isOneLeapYear);
+    System.out.printf("%.0f is a leap year...%b.\n", yearTwo, isTwoLeapYear);
+    System.out.printf("%.0f is a leap year...%b.\n", yearThree, isThreeLeapYear);
         
         /*
          * Exercise 10.
@@ -178,7 +195,14 @@ public class ProblemSet1 {
          * What is the wind chill?
          */
         
-        
+        double temperature = 38;
+    double windSpeed = 14;
+    double windchillFirstCalc = (35.74 + (0.6215*temperature));
+    double windchillSecondCalc = ((0.4275*temperature)-35.75);
+    double windchillThirdCalc = Math.pow(windSpeed, 0.16);
+    double windchillFourthCalc = windchillSecondCalc * windchillThirdCalc;
+    double windchill = windchillFirstCalc + windchillFourthCalc;
+    System.out.printf("%.1f degrees.\n", windchill);
         
     }
 }
