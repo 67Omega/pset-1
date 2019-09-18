@@ -141,7 +141,13 @@ public class ProblemSet1 {
          * people will be on the last bus?
          */
         
-        
+       int students = 273;
+    	int teachers = 28;
+    	double busCapacity = 54;
+    	double totalAttending = students + teachers;
+    	double numberOfBuses = Math.ceil(totalAttending/busCapacity);
+    	double lastBus = totalAttending % busCapacity;
+    	System.out.printf("%.0f buses are needed, with %.0f passengers on the last bus.\n", numberOfBuses, lastBus);
         
         /*
          * Exercise 8.
@@ -149,7 +155,14 @@ public class ProblemSet1 {
          * What is the surface area of a standard Cornhole board?
          */
         
-        
+    double length = 48;
+    double width = 24;
+    double holeDiameter = 6;
+    double holeRadius = holeDiameter / 2;
+    double basicDimensions = length * width;
+    double holeArea = Math.PI * (holeRadius * holeRadius);
+    double totalArea = basicDimensions - holeArea;
+    System.out.printf("%.2f square inches.\n", totalArea);
         
         /*
          * Exercise 9.
